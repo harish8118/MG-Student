@@ -26,7 +26,7 @@ class resultVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
 //        let dflts = UserDefaults.standard
 //        let htno = dflts.value(forKey: "HallTicket")
         
-        guard let gitUrl = URL(string: notfyApi + "400815468031") else { return }
+        guard let gitUrl = URL(string: notfyApi + "451115735025") else { return }
             print("url:\(gitUrl)")
             URLSession.shared.dataTask(with: gitUrl) { (data, response
                             , error) in
@@ -95,9 +95,29 @@ class resultVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let vc : resultDetails1VC = self.storyboard?.instantiateViewController(identifier: "resultDetails1VC") as! resultDetails1VC
-        vc.rollID = self.noteDetails?[indexPath.row].ROLLID ?? 0
-        self.navigationController?.pushViewController(vc, animated: true)
+        if self.noteDetails?[indexPath.row].FORMATID == 2 {
+            let vc : resultDetails1VC = self.storyboard?.instantiateViewController(identifier: "resultDetails1VC") as! resultDetails1VC
+            vc.rollID = self.noteDetails?[indexPath.row].ROLLID ?? 0
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        }else if self.noteDetails?[indexPath.row].FORMATID == 4 {
+            let vc : resultDetails1VC = self.storyboard?.instantiateViewController(identifier: "resultDetails1VC") as! resultDetails1VC
+            vc.rollID = self.noteDetails?[indexPath.row].ROLLID ?? 0
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        }else if self.noteDetails?[indexPath.row].FORMATID == 3 {
+            let vc : resultDetails2VC = self.storyboard?.instantiateViewController(identifier: "resultDetails2VC") as! resultDetails2VC
+            vc.rollID = self.noteDetails?[indexPath.row].ROLLID ?? 0
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        }else if self.noteDetails?[indexPath.row].FORMATID == 5 {
+            let vc : resultDetails3VC = self.storyboard?.instantiateViewController(identifier: "resultDetails3VC") as! resultDetails3VC
+            vc.rollID = self.noteDetails?[indexPath.row].ROLLID ?? 0
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        }
+        
+        
         
     }
     

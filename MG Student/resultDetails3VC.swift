@@ -1,22 +1,20 @@
 //
-//  resultDetails1VC.swift
+//  resultDetails3VC.swift
 //  MG Student
 //
-//  Created by Cyberheights Software Technologies Pvt Ltd on 12/12/20.
+//  Created by Cyberheights Software Technologies Pvt Ltd on 15/12/20.
 //
 
 import UIKit
 import Loaf
 
-class resultDetails1VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
-
-    @IBOutlet weak var rsltDtlTbl: UITableView!
-    @IBOutlet weak var resultTitle: UILabel!
+class resultDetails3VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    @IBOutlet weak var resultTitle: UILabel!
+    @IBOutlet weak var resultTbl: UITableView!
     
     var rollID: Int?
     var resultDetais : [GradeResult]?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +25,7 @@ class resultDetails1VC: UIViewController,UITableViewDelegate,UITableViewDataSour
 //        let dflts = UserDefaults.standard
 //        let htno = dflts.value(forKey: "HallTicket")
         
-        guard let gitUrl = URL(string: gradeApi + "400815468031&rollID=\(self.rollID ?? 0)") else { return }
+        guard let gitUrl = URL(string: gradeApi + "451115735025&rollID=\(self.rollID ?? 0)") else { return }
             print("url:\(gitUrl)")
             URLSession.shared.dataTask(with: gitUrl) { (data, response
                             , error) in
@@ -54,13 +52,13 @@ class resultDetails1VC: UIViewController,UITableViewDelegate,UITableViewDataSour
                     if self.resultDetais?.count ?? 0>0 {
                         self.resultTitle.text =  "* \(self.resultDetais?[0].CONS ?? "")"
                         loadingView.hide()
-                        self.rsltDtlTbl.isHidden = false
-                        self.rsltDtlTbl.reloadData()
+                        self.resultTbl.isHidden = false
+                        self.resultTbl.reloadData()
                                                     
                 }else {
                     loadingView.hide()
                     Loaf("No Data Found.", state: .error, sender: self).show()
-                    self.rsltDtlTbl.isHidden = true
+                    self.resultTbl.isHidden = true
                     
                 }
                     
@@ -104,7 +102,7 @@ class resultDetails1VC: UIViewController,UITableViewDelegate,UITableViewDataSour
         }else if indexPath.row > 1 {
             let cl : resultCell = tableView.dequeueReusableCell(withIdentifier: "resltData", for: indexPath) as! resultCell
             
-            cl.subjectCode.text = "\(self.resultDetais?[indexPath.row-1].SUBJECTCODE ?? "")"
+            cl.subjectCode.text = "\(self.resultDetais?[indexPath.row-1].GRADE ?? "")"
             cl.subjectName.text = "\(self.resultDetais?[indexPath.row-1].SUBJECTNAME ?? "")"
             cl.creditPoint.text = "\(self.resultDetais?[indexPath.row-1].CREDITPOINT ?? 0)"
             cl.grade.text = "\(self.resultDetais?[indexPath.row-1].GRADE ?? "")"
@@ -124,5 +122,4 @@ class resultDetails1VC: UIViewController,UITableViewDelegate,UITableViewDataSour
         
         return 40
     }
-    
 }

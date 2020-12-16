@@ -14,11 +14,11 @@ let ipAdrs = "http://120.138.10.249/StudentMobile/"
 
 let notfyApi = "\(ipAdrs)api/MgResult/GetMgResultNoteDetails?htno="
 
-let marksApi = "\(ipAdrs)api/MgResult/GetMgMarksResultDetails?htno={htno}&rollID={rollID}"
+let marksApi = "\(ipAdrs)api/MgResult/GetMgMarksResultDetails?htno="
 
 let gradeApi = "\(ipAdrs)api/MgResult/GetMgGradeResultDetails?htno="
 
-let noInternalsApi = "\(ipAdrs)api/MgResult/GetMgNoInternalsResultDetails?htno={htno}&rollID={rollID}"
+let noInternalsApi = "\(ipAdrs)api/MgResult/GetMgNoInternalsResultDetails?htno="
 
 let loadingView = RSLoadingView(effectType: RSLoadingView.Effect.twins)
 
@@ -62,4 +62,50 @@ struct GradeResult: Codable {
     }
 }
 
+struct BtechResult: Codable {
+    let HTNO: String?
+    let SNAME: String?
+    let GRADE: String?
+    let SUBJECTCODE: String?
+    let SUBJECTNAME: String?
+    let CREDITPOINT: Int?
+    let SGPA: String?
+    let STATUSNAME: String?
+    let CONS: String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case HTNO
+        case SNAME
+        case GRADE
+        case SUBJECTCODE
+        case SUBJECTNAME
+        case CREDITPOINT
+        case SGPA
+        case STATUSNAME
+        case CONS
+    }
+}
 
+struct InternalResult: Codable {
+    let HTNO: String?
+    let SNAME: String?
+    let THEORYMARKS: Int?
+    let IMARKS: Int?
+    let SUBJECTNAME: String?
+    let GRANDTOTAL: Int?
+    let TOTALMARKS: Int?
+    let STATUSNAME: String?
+    let CONS: String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case HTNO
+        case SNAME
+        case THEORYMARKS
+        case IMARKS
+        case SUBJECTNAME
+        case GRANDTOTAL
+        case TOTALMARKS
+        case STATUSNAME
+        case CONS
+    }
+}

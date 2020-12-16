@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,8 @@
 		CC816C632584CAC00072CED8 /* dashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC816C622584CAC00072CED8 /* dashVC.swift */; };
 		CC816C872584F0DA0072CED8 /* resultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC816C862584F0DA0072CED8 /* resultVC.swift */; };
 		CC816C8C2584F5AE0072CED8 /* resultDetails1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC816C8B2584F5AE0072CED8 /* resultDetails1VC.swift */; };
+		CCAD3F842588DF780029FA75 /* resultDetails2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAD3F832588DF780029FA75 /* resultDetails2VC.swift */; };
+		CCAD3F8A2588F1120029FA75 /* resultDetails3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAD3F892588F1120029FA75 /* resultDetails3VC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		CC816C622584CAC00072CED8 /* dashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashVC.swift; sourceTree = "<group>"; };
 		CC816C862584F0DA0072CED8 /* resultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultVC.swift; sourceTree = "<group>"; };
 		CC816C8B2584F5AE0072CED8 /* resultDetails1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultDetails1VC.swift; sourceTree = "<group>"; };
+		CCAD3F832588DF780029FA75 /* resultDetails2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultDetails2VC.swift; sourceTree = "<group>"; };
+		CCAD3F892588F1120029FA75 /* resultDetails3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultDetails3VC.swift; sourceTree = "<group>"; };
 		E0459D3780843A4BD46A0A4A /* Pods-MG Student-MG StudentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MG Student-MG StudentUITests.debug.xcconfig"; path = "Target Support Files/Pods-MG Student-MG StudentUITests/Pods-MG Student-MG StudentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F87FF32D8757F044D7807256 /* Pods_MG_Student.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MG_Student.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,7 +125,6 @@
 				396247653385A8858B57B5C5 /* Pods-MG StudentTests.debug.xcconfig */,
 				085B2987568DFDB81EDBB4DB /* Pods-MG StudentTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -156,6 +159,8 @@
 				CC816C622584CAC00072CED8 /* dashVC.swift */,
 				CC816C862584F0DA0072CED8 /* resultVC.swift */,
 				CC816C8B2584F5AE0072CED8 /* resultDetails1VC.swift */,
+				CCAD3F832588DF780029FA75 /* resultDetails2VC.swift */,
+				CCAD3F892588F1120029FA75 /* resultDetails3VC.swift */,
 				CC162ACE2587392300B7E7AD /* resultCell.swift */,
 				CC816C2F2584C8F50072CED8 /* Main.storyboard */,
 				CC816C352584C8F60072CED8 /* Assets.xcassets */,
@@ -427,8 +432,10 @@
 				CC816C8C2584F5AE0072CED8 /* resultDetails1VC.swift in Sources */,
 				CC816C342584C8F50072CED8 /* MG_Student.xcdatamodeld in Sources */,
 				CC162ACF2587392300B7E7AD /* resultCell.swift in Sources */,
+				CCAD3F842588DF780029FA75 /* resultDetails2VC.swift in Sources */,
 				CC816C2A2584C8F50072CED8 /* AppDelegate.swift in Sources */,
 				CC162AD425873C2F00B7E7AD /* API.swift in Sources */,
+				CCAD3F8A2588F1120029FA75 /* resultDetails3VC.swift in Sources */,
 				CC816C2C2584C8F50072CED8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
