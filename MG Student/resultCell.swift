@@ -11,7 +11,10 @@ class resultCell: UITableViewCell {
     
     @IBOutlet weak var noteDescription: UILabel!
     
-
+    @IBOutlet weak var subjectType: UILabel!
+    @IBOutlet weak var thearyMarks: UILabel!
+    @IBOutlet weak var result: UILabel!
+    
     @IBOutlet weak var subjectCode: UILabel!
     @IBOutlet weak var subjectName: UILabel!
     @IBOutlet weak var creditPoint: UILabel!

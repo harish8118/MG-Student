@@ -12,6 +12,14 @@
 		50863D7CE26A22E0DCD4F756 /* Pods_MG_Student.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87FF32D8757F044D7807256 /* Pods_MG_Student.framework */; };
 		CC162ACF2587392300B7E7AD /* resultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC162ACE2587392300B7E7AD /* resultCell.swift */; };
 		CC162AD425873C2F00B7E7AD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC162AD325873C2F00B7E7AD /* API.swift */; };
+		CC65016A258B3C4800DF2D27 /* signinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC650169258B3C4800DF2D27 /* signinVC.swift */; };
+		CC65016F258B414200DF2D27 /* confirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC65016E258B414200DF2D27 /* confirmVC.swift */; };
+		CC650174258B41CD00DF2D27 /* Screenshot_2020-12-17-11-52-43-934_io.cordova.myapp13e1b4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC650173258B41CD00DF2D27 /* Screenshot_2020-12-17-11-52-43-934_io.cordova.myapp13e1b4.jpg */; };
+		CC650179258B74A900DF2D27 /* otpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC650178258B74A900DF2D27 /* otpVC.swift */; };
+		CC65017E258B74BF00DF2D27 /* setupPinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC65017D258B74BF00DF2D27 /* setupPinVC.swift */; };
+		CC650183258B74D300DF2D27 /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC650182258B74D300DF2D27 /* loginVC.swift */; };
+		CC650188258B7D6000DF2D27 /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC650187258B7D6000DF2D27 /* RootVC.swift */; };
+		CC650199258B8BA500DF2D27 /* mgBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC650198258B8BA500DF2D27 /* mgBack.jpg */; };
 		CC816C2A2584C8F50072CED8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC816C292584C8F50072CED8 /* AppDelegate.swift */; };
 		CC816C2C2584C8F50072CED8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC816C2B2584C8F50072CED8 /* SceneDelegate.swift */; };
 		CC816C312584C8F50072CED8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC816C2F2584C8F50072CED8 /* Main.storyboard */; };
@@ -25,6 +33,8 @@
 		CC816C8C2584F5AE0072CED8 /* resultDetails1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC816C8B2584F5AE0072CED8 /* resultDetails1VC.swift */; };
 		CCAD3F842588DF780029FA75 /* resultDetails2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAD3F832588DF780029FA75 /* resultDetails2VC.swift */; };
 		CCAD3F8A2588F1120029FA75 /* resultDetails3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAD3F892588F1120029FA75 /* resultDetails3VC.swift */; };
+		CCAD3F8F258A0D390029FA75 /* marksResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAD3F8E258A0D390029FA75 /* marksResultsVC.swift */; };
+		CCAD3F94258A34D90029FA75 /* bg-pattern.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCAD3F93258A34D90029FA75 /* bg-pattern.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +64,14 @@
 		AC9848D6C4323F950F3F8B00 /* Pods-MG Student.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MG Student.debug.xcconfig"; path = "Target Support Files/Pods-MG Student/Pods-MG Student.debug.xcconfig"; sourceTree = "<group>"; };
 		CC162ACE2587392300B7E7AD /* resultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultCell.swift; sourceTree = "<group>"; };
 		CC162AD325873C2F00B7E7AD /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		CC650169258B3C4800DF2D27 /* signinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signinVC.swift; sourceTree = "<group>"; };
+		CC65016E258B414200DF2D27 /* confirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmVC.swift; sourceTree = "<group>"; };
+		CC650173258B41CD00DF2D27 /* Screenshot_2020-12-17-11-52-43-934_io.cordova.myapp13e1b4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Screenshot_2020-12-17-11-52-43-934_io.cordova.myapp13e1b4.jpg"; sourceTree = "<group>"; };
+		CC650178258B74A900DF2D27 /* otpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otpVC.swift; sourceTree = "<group>"; };
+		CC65017D258B74BF00DF2D27 /* setupPinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setupPinVC.swift; sourceTree = "<group>"; };
+		CC650182258B74D300DF2D27 /* loginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
+		CC650187258B7D6000DF2D27 /* RootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
+		CC650198258B8BA500DF2D27 /* mgBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mgBack.jpg; sourceTree = "<group>"; };
 		CC816C262584C8F50072CED8 /* MG Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MG Student.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC816C292584C8F50072CED8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC816C2B2584C8F50072CED8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +91,8 @@
 		CC816C8B2584F5AE0072CED8 /* resultDetails1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultDetails1VC.swift; sourceTree = "<group>"; };
 		CCAD3F832588DF780029FA75 /* resultDetails2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultDetails2VC.swift; sourceTree = "<group>"; };
 		CCAD3F892588F1120029FA75 /* resultDetails3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultDetails3VC.swift; sourceTree = "<group>"; };
+		CCAD3F8E258A0D390029FA75 /* marksResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marksResultsVC.swift; sourceTree = "<group>"; };
+		CCAD3F93258A34D90029FA75 /* bg-pattern.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bg-pattern.jpg"; sourceTree = "<group>"; };
 		E0459D3780843A4BD46A0A4A /* Pods-MG Student-MG StudentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MG Student-MG StudentUITests.debug.xcconfig"; path = "Target Support Files/Pods-MG Student-MG StudentUITests/Pods-MG Student-MG StudentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F87FF32D8757F044D7807256 /* Pods_MG_Student.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MG_Student.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -156,15 +176,25 @@
 				CC816C292584C8F50072CED8 /* AppDelegate.swift */,
 				CC816C2B2584C8F50072CED8 /* SceneDelegate.swift */,
 				CC162AD325873C2F00B7E7AD /* API.swift */,
+				CC650187258B7D6000DF2D27 /* RootVC.swift */,
+				CC650169258B3C4800DF2D27 /* signinVC.swift */,
+				CC65016E258B414200DF2D27 /* confirmVC.swift */,
+				CC650178258B74A900DF2D27 /* otpVC.swift */,
+				CC65017D258B74BF00DF2D27 /* setupPinVC.swift */,
+				CC650182258B74D300DF2D27 /* loginVC.swift */,
 				CC816C622584CAC00072CED8 /* dashVC.swift */,
 				CC816C862584F0DA0072CED8 /* resultVC.swift */,
 				CC816C8B2584F5AE0072CED8 /* resultDetails1VC.swift */,
 				CCAD3F832588DF780029FA75 /* resultDetails2VC.swift */,
 				CCAD3F892588F1120029FA75 /* resultDetails3VC.swift */,
+				CCAD3F8E258A0D390029FA75 /* marksResultsVC.swift */,
 				CC162ACE2587392300B7E7AD /* resultCell.swift */,
 				CC816C2F2584C8F50072CED8 /* Main.storyboard */,
 				CC816C352584C8F60072CED8 /* Assets.xcassets */,
 				CC816C372584C8F60072CED8 /* LaunchScreen.storyboard */,
+				CCAD3F93258A34D90029FA75 /* bg-pattern.jpg */,
+				CC650173258B41CD00DF2D27 /* Screenshot_2020-12-17-11-52-43-934_io.cordova.myapp13e1b4.jpg */,
+				CC650198258B8BA500DF2D27 /* mgBack.jpg */,
 				CC816C3A2584C8F60072CED8 /* Info.plist */,
 				CC816C322584C8F50072CED8 /* MG_Student.xcdatamodeld */,
 			);
@@ -297,9 +327,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC650199258B8BA500DF2D27 /* mgBack.jpg in Resources */,
 				CC816C392584C8F60072CED8 /* LaunchScreen.storyboard in Resources */,
+				CCAD3F94258A34D90029FA75 /* bg-pattern.jpg in Resources */,
 				CC816C362584C8F60072CED8 /* Assets.xcassets in Resources */,
 				CC816C312584C8F50072CED8 /* Main.storyboard in Resources */,
+				CC650174258B41CD00DF2D27 /* Screenshot_2020-12-17-11-52-43-934_io.cordova.myapp13e1b4.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,11 +464,18 @@
 				CC816C632584CAC00072CED8 /* dashVC.swift in Sources */,
 				CC816C8C2584F5AE0072CED8 /* resultDetails1VC.swift in Sources */,
 				CC816C342584C8F50072CED8 /* MG_Student.xcdatamodeld in Sources */,
+				CC650179258B74A900DF2D27 /* otpVC.swift in Sources */,
 				CC162ACF2587392300B7E7AD /* resultCell.swift in Sources */,
 				CCAD3F842588DF780029FA75 /* resultDetails2VC.swift in Sources */,
+				CC65016A258B3C4800DF2D27 /* signinVC.swift in Sources */,
 				CC816C2A2584C8F50072CED8 /* AppDelegate.swift in Sources */,
 				CC162AD425873C2F00B7E7AD /* API.swift in Sources */,
+				CC650183258B74D300DF2D27 /* loginVC.swift in Sources */,
+				CC650188258B7D6000DF2D27 /* RootVC.swift in Sources */,
+				CC65016F258B414200DF2D27 /* confirmVC.swift in Sources */,
+				CC65017E258B74BF00DF2D27 /* setupPinVC.swift in Sources */,
 				CCAD3F8A2588F1120029FA75 /* resultDetails3VC.swift in Sources */,
+				CCAD3F8F258A0D390029FA75 /* marksResultsVC.swift in Sources */,
 				CC816C2C2584C8F50072CED8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

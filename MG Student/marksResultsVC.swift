@@ -1,20 +1,23 @@
 //
-//  resultDetails3VC.swift
+//  marksResultsVC.swift
 //  MG Student
 //
-//  Created by Cyberheights Software Technologies Pvt Ltd on 15/12/20.
+//  Created by Cyberheights Software Technologies Pvt Ltd on 16/12/20.
 //
 
 import UIKit
 import Loaf
 
-class resultDetails3VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
+
+
+
+class marksResultsVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    @IBOutlet weak var marksTbl: UITableView!
     @IBOutlet weak var resultTitle: UILabel!
-    @IBOutlet weak var resultTbl: UITableView!
     
     var rollID: Int?
-    var resultDetais : [BtechResult]?
+    var markDetais : [MarksResult]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +28,7 @@ class resultDetails3VC: UIViewController,UITableViewDelegate,UITableViewDataSour
 //        let dflts = UserDefaults.standard
 //        let htno = dflts.value(forKey: "HallTicket")
         
-        guard let gitUrl = URL(string: gradeApi + "451115735025&rollID=\(self.rollID ?? 0)") else { return }
+        guard let gitUrl = URL(string: marksApi + "400815468031&rollID=\(self.rollID ?? 0)") else { return }
             print("url:\(gitUrl)")
             URLSession.shared.dataTask(with: gitUrl) { (data, response
                             , error) in
@@ -43,22 +46,22 @@ class resultDetails3VC: UIViewController,UITableViewDelegate,UITableViewDataSour
             do {
                                 
                 let decoder = JSONDecoder()
-                self.resultDetais = try decoder.decode([BtechResult].self, from: data)
+                self.markDetais = try decoder.decode([MarksResult].self, from: data)
                             
-                print("gitData:\(self.resultDetais ?? [])")
+                print("gitData:\(self.markDetais ?? [])")
                 
                 DispatchQueue.main.async {
                     
-                    if self.resultDetais?.count ?? 0>0 {
-                        self.resultTitle.text =  "* \(self.resultDetais?[0].CONS ?? "")"
+                    if self.markDetais?.count ?? 0>0 {
+                        self.resultTitle.text =  "* \(self.markDetais?[0].CONS ?? "")"
                         loadingView.hide()
-                        self.resultTbl.isHidden = false
-                        self.resultTbl.reloadData()
+                        self.marksTbl.isHidden = false
+                        self.marksTbl.reloadData()
                                                     
                 }else {
                     loadingView.hide()
                     Loaf("No Data Found.", state: .error, sender: self).show()
-                    self.resultTbl.isHidden = true
+                    self.marksTbl.isHidden = true
                     
                 }
                     
@@ -77,8 +80,10 @@ class resultDetails3VC: UIViewController,UITableViewDelegate,UITableViewDataSour
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.resultDetais?.count ?? 0>0 {
-            return self.resultDetais?.count ?? 0 + 2
+        if self.markDetais?.count ?? 0>0 {
+            let tmp : Int = self.markDetais?.count ?? 0
+            print("Count:\(tmp)")
+            return   tmp + 2
         }
         return 0
     }
@@ -87,25 +92,25 @@ class resultDetails3VC: UIViewController,UITableViewDelegate,UITableViewDataSour
         var cll : UITableViewCell = UITableViewCell.init()
         
         if indexPath.row == 0  {
-            let cl : resultCell = tableView.dequeueReusableCell(withIdentifier: "resltFinal", for: indexPath) as! resultCell
+            let cl : resultCell = tableView.dequeueReusableCell(withIdentifier: "resltFinal4", for: indexPath) as! resultCell
             
-            cl.sgpa.text = "SGPA: \(self.resultDetais?[0].SGPA ?? "")"
-            cl.resultStatus.text = "RES: \(self.resultDetais?[0].STATUSNAME ?? "")"
+            cl.sgpa.text = "Grand Total: \(self.markDetais?[0].GRANDTOTAL ?? 0)"
+            cl.resultStatus.text = "RES: \(self.markDetais?[0].STATUSNAME ?? "")"
             
             cll = cl
             
         }else if indexPath.row == 1 {
-            let cl : resultCell = tableView.dequeueReusableCell(withIdentifier: "resltHead", for: indexPath) as! resultCell
+            let cl : resultCell = tableView.dequeueReusableCell(withIdentifier: "resltHead4", for: indexPath) as! resultCell
             
             cll = cl
             
-        }else if indexPath.row > 1 {
-            let cl : resultCell = tableView.dequeueReusableCell(withIdentifier: "resltData", for: indexPath) as! resultCell
+        } else if indexPath.row > 1 {
+            let cl : resultCell = tableView.dequeueReusableCell(withIdentifier: "resltData4", for: indexPath) as! resultCell
             
-            cl.subjectCode.text = "\(self.resultDetais?[indexPath.row-1].GRADE ?? "")"
-            cl.subjectName.text = "\(self.resultDetais?[indexPath.row-1].SUBJECTNAME ?? "")"
-            cl.creditPoint.text = "\(self.resultDetais?[indexPath.row-1].CREDITPOINT ?? 0)"
-            cl.grade.text = "\(self.resultDetais?[indexPath.row-1].GRADEPOINT ?? "")"
+            cl.subjectType.text = "\(self.markDetais?[indexPath.row-2].SUBJECTTYPE ?? "")"
+            cl.subjectName.text = "\(self.markDetais?[indexPath.row-2].SUBJECTNAME ?? "")"
+            cl.thearyMarks.text = "\(self.markDetais?[indexPath.row-2].THEORYMARKS ?? 0)"
+            cl.result.text = "\(self.markDetais?[indexPath.row-2].RESULT ?? "")"
 
             
             cll = cl

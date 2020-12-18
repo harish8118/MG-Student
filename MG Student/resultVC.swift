@@ -17,20 +17,29 @@ class resultVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var resultTbl: UITableView!
     var noteDetails : [Notes]?
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         loadingView.shouldTapToDismiss = false
         loadingView.show(on: view)
                
 //        let dflts = UserDefaults.standard
 //        let htno = dflts.value(forKey: "HallTicket")
         
-        guard let gitUrl = URL(string: notfyApi + "451115735025") else { return }
+        guard let gitUrl = URL(string: notfyApi + "400815468031") else { return }
             print("url:\(gitUrl)")
             URLSession.shared.dataTask(with: gitUrl) { (data, response
                             , error) in
             
+            DispatchQueue.main.async {
+                    
             if let err = error {
                 print("err:\(err)")
                 let alert = UIAlertController(title: "Alert", message: "No internet is available. Please connect to network.", preferredStyle: UIAlertController.Style.actionSheet)
@@ -70,6 +79,7 @@ class resultVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
                 Loaf("Something went wrong.Try again.", state: .error, sender: self).show()
 
                 }
+            }
             }.resume()
     }
     
@@ -88,6 +98,8 @@ class resultVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
         cl.noteDescription.text = " * \(self.noteDetails?[indexPath.row].LINK_DESCRIPTION ?? "Pass")"
         
+        cl.layer.cornerRadius = 8.0
+        cl.layer.masksToBounds = true
         
         return cl
     }
@@ -95,10 +107,17 @@ class resultVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        if self.noteDetails?[indexPath.row].FORMATID == 2 {
+        if self.noteDetails?[indexPath.row].FORMATID == 1 {
+            let vc : marksResultsVC = self.storyboard?.instantiateViewController(identifier: "marksResultsVC") as! marksResultsVC
+            vc.rollID = self.noteDetails?[indexPath.row].ROLLID ?? 0
+            self.navigationController?.show(vc, sender: self)
+            //self.navigationController?.pushViewController(vc, animated: true)
+            
+        }else if self.noteDetails?[indexPath.row].FORMATID == 2 {
             let vc : resultDetails1VC = self.storyboard?.instantiateViewController(identifier: "resultDetails1VC") as! resultDetails1VC
             vc.rollID = self.noteDetails?[indexPath.row].ROLLID ?? 0
-            self.navigationController?.pushViewController(vc, animated: true)
+            self.navigationController?.show(vc, sender: self)
+            //self.navigationController?.pushViewController(vc, animated: true)
             
         }else if self.noteDetails?[indexPath.row].FORMATID == 4 {
             let vc : resultDetails1VC = self.storyboard?.instantiateViewController(identifier: "resultDetails1VC") as! resultDetails1VC

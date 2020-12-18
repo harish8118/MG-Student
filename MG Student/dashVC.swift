@@ -12,20 +12,28 @@ class dashVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     
     
 
+    @IBOutlet weak var prflImg: UIImageView!
     @IBOutlet weak var sName: UILabel!
     @IBOutlet weak var htno: UILabel!
     @IBOutlet weak var course: UILabel!
     @IBOutlet weak var dashTbl: UICollectionView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        self.prflImg.layer.cornerRadius = self.prflImg.frame.height/2
+        self.prflImg.layer.masksToBounds = true
+    
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 6
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -51,6 +59,16 @@ class dashVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
             
             dsh = cll
             
+        }else if indexPath.row == 4 {
+            let cll : UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "mgDash4", for: indexPath)
+            
+            dsh = cll
+            
+        }else if indexPath.row == 5 {
+            let cll : UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "mgDash5", for: indexPath)
+            
+            dsh = cll
+            
         }
         
         dsh.layer.cornerRadius = 30.0
@@ -66,8 +84,11 @@ class dashVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             let vc : resultVC = self.storyboard?.instantiateViewController(identifier: "resultVC") as! resultVC
-        
-            self.navigationController?.pushViewController(vc, animated: true)
+            vc.navigationController?.navigationBar.isHidden = false
+//            vc.navigationItem.setHidesBackButton(true, animated:false);
+            self.navigationController?.navigationBar.isHidden = false
+            self.navigationController?.show(vc, sender: self)
+            //self.navigationController?.pushViewController(vc, animated: true)
             
         }
     }

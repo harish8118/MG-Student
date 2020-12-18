@@ -10,7 +10,7 @@ import RSLoadingView
 
 
 
-let ipAdrs = "http://120.138.10.249/StudentMobile/"
+let ipAdrs = "http://120.138.10.249/mgstudent/"
 
 let notfyApi = "\(ipAdrs)api/MgResult/GetMgResultNoteDetails?htno="
 
@@ -72,6 +72,7 @@ struct BtechResult: Codable {
     let SGPA: String?
     let STATUSNAME: String?
     let CONS: String?
+    let GRADEPOINT: String?
     
     private enum CodingKeys: String, CodingKey {
         case HTNO
@@ -83,6 +84,7 @@ struct BtechResult: Codable {
         case SGPA
         case STATUSNAME
         case CONS
+        case GRADEPOINT
     }
 }
 
@@ -96,6 +98,7 @@ struct InternalResult: Codable {
     let TOTALMARKS: Int?
     let STATUSNAME: String?
     let CONS: String?
+    let SUBJECTTYPE:String?
     
     private enum CodingKeys: String, CodingKey {
         case HTNO
@@ -107,5 +110,34 @@ struct InternalResult: Codable {
         case TOTALMARKS
         case STATUSNAME
         case CONS
+        case SUBJECTTYPE
+    }
+}
+
+struct MarksResult: Codable {
+    let HTNO: String?
+    let SNAME: String?
+    let THEORYMARKS: Int?
+    let IMARKS: Int?
+    let SUBJECTNAME: String?
+    let GRANDTOTAL: Int?
+    let TOTALMARKS: Int?
+    let STATUSNAME: String?
+    let CONS: String?
+    let SUBJECTTYPE:String?
+    let RESULT:String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case HTNO
+        case SNAME
+        case THEORYMARKS
+        case IMARKS
+        case SUBJECTNAME
+        case GRANDTOTAL
+        case TOTALMARKS
+        case STATUSNAME
+        case CONS
+        case SUBJECTTYPE
+        case RESULT
     }
 }
