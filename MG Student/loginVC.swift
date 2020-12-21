@@ -9,13 +9,21 @@ import UIKit
 
 class loginVC: UIViewController {
 
+    @IBOutlet weak var pinTF: UITextField!
+    @IBOutlet weak var noteLbl: UILabel!
+    @IBOutlet weak var loginBttn: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func loginAct(_ sender: UIButton) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -31,6 +31,7 @@
 		CC816C632584CAC00072CED8 /* dashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC816C622584CAC00072CED8 /* dashVC.swift */; };
 		CC816C872584F0DA0072CED8 /* resultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC816C862584F0DA0072CED8 /* resultVC.swift */; };
 		CC816C8C2584F5AE0072CED8 /* resultDetails1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC816C8B2584F5AE0072CED8 /* resultDetails1VC.swift */; };
+		CC8C8FC4258E1B3900975E70 /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CC8C8FC3258E1B3900975E70 /* app_icon.png */; };
 		CCAD3F842588DF780029FA75 /* resultDetails2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAD3F832588DF780029FA75 /* resultDetails2VC.swift */; };
 		CCAD3F8A2588F1120029FA75 /* resultDetails3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAD3F892588F1120029FA75 /* resultDetails3VC.swift */; };
 		CCAD3F8F258A0D390029FA75 /* marksResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAD3F8E258A0D390029FA75 /* marksResultsVC.swift */; };
@@ -89,6 +90,7 @@
 		CC816C622584CAC00072CED8 /* dashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashVC.swift; sourceTree = "<group>"; };
 		CC816C862584F0DA0072CED8 /* resultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultVC.swift; sourceTree = "<group>"; };
 		CC816C8B2584F5AE0072CED8 /* resultDetails1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultDetails1VC.swift; sourceTree = "<group>"; };
+		CC8C8FC3258E1B3900975E70 /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon.png; sourceTree = "<group>"; };
 		CCAD3F832588DF780029FA75 /* resultDetails2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultDetails2VC.swift; sourceTree = "<group>"; };
 		CCAD3F892588F1120029FA75 /* resultDetails3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultDetails3VC.swift; sourceTree = "<group>"; };
 		CCAD3F8E258A0D390029FA75 /* marksResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marksResultsVC.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				CC816C372584C8F60072CED8 /* LaunchScreen.storyboard */,
 				CCAD3F93258A34D90029FA75 /* bg-pattern.jpg */,
 				CC650173258B41CD00DF2D27 /* Screenshot_2020-12-17-11-52-43-934_io.cordova.myapp13e1b4.jpg */,
+				CC8C8FC3258E1B3900975E70 /* app_icon.png */,
 				CC650198258B8BA500DF2D27 /* mgBack.jpg */,
 				CC816C3A2584C8F60072CED8 /* Info.plist */,
 				CC816C322584C8F50072CED8 /* MG_Student.xcdatamodeld */,
@@ -331,6 +334,7 @@
 				CC816C392584C8F60072CED8 /* LaunchScreen.storyboard in Resources */,
 				CCAD3F94258A34D90029FA75 /* bg-pattern.jpg in Resources */,
 				CC816C362584C8F60072CED8 /* Assets.xcassets in Resources */,
+				CC8C8FC4258E1B3900975E70 /* app_icon.png in Resources */,
 				CC816C312584C8F50072CED8 /* Main.storyboard in Resources */,
 				CC650174258B41CD00DF2D27 /* Screenshot_2020-12-17-11-52-43-934_io.cordova.myapp13e1b4.jpg in Resources */,
 			);

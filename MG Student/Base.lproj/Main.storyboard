@@ -72,6 +72,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signinAct:" destination="sGn-aJ-gBj" eventType="touchUpInside" id="oLE-DE-fnC"/>
+                                    <action selector="sumbitAct:" destination="Hzk-yB-zdb" eventType="touchUpInside" id="aY0-bc-Yu2"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HhP-N9-Wqa">
@@ -94,6 +95,17 @@
                                     <constraint firstAttribute="height" constant="255" id="yGa-k4-CKt"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCF-Cq-zVW">
+                                <rect key="frame" x="368" y="255" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="Wvm-G2-pWp"/>
+                                    <constraint firstAttribute="height" constant="32" id="ce7-g2-kv7"/>
+                                </constraints>
+                                <state key="normal" image="closeWhite"/>
+                                <connections>
+                                    <action selector="backAct:" destination="Hzk-yB-zdb" eventType="touchUpInside" id="uj5-vB-22x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YQV-Hg-8ed"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -108,6 +120,8 @@
                             <constraint firstItem="KAd-0g-K9V" firstAttribute="leading" secondItem="a0t-T6-jgf" secondAttribute="leading" constant="24" id="Swy-uk-ch7"/>
                             <constraint firstItem="1Qg-uM-OfO" firstAttribute="leading" secondItem="YQV-Hg-8ed" secondAttribute="leading" id="UWQ-eR-b8w"/>
                             <constraint firstItem="eaR-ME-Hyz" firstAttribute="leading" secondItem="YQV-Hg-8ed" secondAttribute="leading" constant="20" id="YLU-hE-MkO"/>
+                            <constraint firstItem="YQV-Hg-8ed" firstAttribute="trailing" secondItem="YCF-Cq-zVW" secondAttribute="trailing" constant="14" id="dLp-Sw-PoY"/>
+                            <constraint firstItem="YCF-Cq-zVW" firstAttribute="top" secondItem="1Qg-uM-OfO" secondAttribute="bottom" id="gcw-cE-l6U"/>
                             <constraint firstItem="HhP-N9-Wqa" firstAttribute="top" secondItem="vdN-uc-gQC" secondAttribute="bottom" constant="78" id="n7E-oS-vhH"/>
                             <constraint firstItem="YxH-Yi-G2y" firstAttribute="top" secondItem="9QE-Pz-QZS" secondAttribute="bottom" constant="40" id="nxO-Ke-btV"/>
                             <constraint firstItem="eaR-ME-Hyz" firstAttribute="top" secondItem="1Qg-uM-OfO" secondAttribute="bottom" constant="15" id="o5l-mJ-cRj"/>
@@ -119,6 +133,11 @@
                             <constraint firstAttribute="trailing" secondItem="KAd-0g-K9V" secondAttribute="trailing" constant="24" id="wbK-Wy-TTN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cnfrmPinTF" destination="9QE-Pz-QZS" id="Q2d-w9-rMq"/>
+                        <outlet property="pinTF" destination="vdN-uc-gQC" id="Xsu-tC-A2F"/>
+                        <outlet property="sumbitBttn" destination="YxH-Yi-G2y" id="8P1-Me-mFi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="53m-bH-lrK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,6 +193,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="loginAct:" destination="YUx-g3-6Mm" eventType="touchUpInside" id="cm1-hM-SwU"/>
                                     <action selector="signinAct:" destination="sGn-aJ-gBj" eventType="touchUpInside" id="PBH-ce-MVQ"/>
                                 </connections>
                             </button>
@@ -225,6 +245,11 @@
                             <constraint firstItem="twT-SE-sff" firstAttribute="trailing" secondItem="uD2-F6-UcW" secondAttribute="trailing" id="zw0-Oh-qJ3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginBttn" destination="EXu-zC-xni" id="OEX-pX-y2g"/>
+                        <outlet property="noteLbl" destination="iV7-JH-871" id="hN9-Ig-V3M"/>
+                        <outlet property="pinTF" destination="6LF-U1-GHC" id="a8f-Zp-RB9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdQ-1y-FOL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -355,7 +380,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Dp-6N-F4i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-286" y="96"/>
+            <point key="canvasLocation" x="-286.95652173913044" y="95.758928571428569"/>
         </scene>
         <!--ConfirmVC-->
         <scene sceneID="dQz-3n-md5">
@@ -365,12 +390,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot_2020-12-17-11-52-43-934_io.cordova.myapp13e1b4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Hch-F2-Tjg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="255"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="255" id="YZl-jP-TCt"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xB2-CX-pt3">
                                 <rect key="frame" x="20" y="265" width="196" height="32"/>
                                 <constraints>
@@ -418,11 +437,30 @@
                                     <action selector="signinAct:" destination="sGn-aJ-gBj" eventType="touchUpInside" id="AcQ-yO-Ohx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6m-18-pgf">
+                                <rect key="frame" x="368" y="255" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="CSq-Op-vyT"/>
+                                    <constraint firstAttribute="width" constant="32" id="VHQ-Yp-2bB"/>
+                                </constraints>
+                                <state key="normal" image="closeWhite"/>
+                                <connections>
+                                    <action selector="backAct:" destination="xef-Rt-hAK" eventType="touchUpInside" id="oOf-nl-wkE"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot_2020-12-17-11-52-43-934_io.cordova.myapp13e1b4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Hch-F2-Tjg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="255"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="255" id="YZl-jP-TCt"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LYY-Qp-YOz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="A6m-18-pgf" firstAttribute="top" secondItem="Hch-F2-Tjg" secondAttribute="bottom" id="CK3-SN-xLX"/>
                             <constraint firstItem="Hch-F2-Tjg" firstAttribute="trailing" secondItem="LYY-Qp-YOz" secondAttribute="trailing" id="K5d-d6-HZv"/>
+                            <constraint firstItem="LYY-Qp-YOz" firstAttribute="trailing" secondItem="A6m-18-pgf" secondAttribute="trailing" constant="14" id="PaG-Vk-qTM"/>
                             <constraint firstItem="LYY-Qp-YOz" firstAttribute="trailing" secondItem="kvn-I8-j2E" secondAttribute="trailing" constant="20" id="UYh-lG-ZwX"/>
                             <constraint firstItem="xB2-CX-pt3" firstAttribute="leading" secondItem="LYY-Qp-YOz" secondAttribute="leading" constant="20" id="Y7h-an-ler"/>
                             <constraint firstItem="tF1-pF-82O" firstAttribute="centerX" secondItem="Kuw-7b-5TY" secondAttribute="centerX" id="Zgb-zU-ZbR"/>
@@ -527,11 +565,23 @@
                                     <constraint firstAttribute="height" constant="3" id="iW6-wT-wTZ"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3t-ld-Kul">
+                                <rect key="frame" x="368" y="255" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="QRJ-jO-CWh"/>
+                                    <constraint firstAttribute="width" constant="32" id="UOm-po-hB6"/>
+                                </constraints>
+                                <state key="normal" image="closeWhite"/>
+                                <connections>
+                                    <action selector="backAct:" destination="0o3-du-8Wf" eventType="touchUpInside" id="CMH-t5-HEv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LwS-vu-O69"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="CbC-S2-hUU" firstAttribute="top" secondItem="Gza-uh-7lU" secondAttribute="bottom" constant="40" id="0G3-Do-y8b"/>
+                            <constraint firstItem="M3t-ld-Kul" firstAttribute="top" secondItem="LUI-bd-Tot" secondAttribute="bottom" id="0Hs-QU-cuo"/>
                             <constraint firstItem="Gza-uh-7lU" firstAttribute="top" secondItem="Z3c-9Q-N1e" secondAttribute="bottom" constant="15" id="23f-wq-D7c"/>
                             <constraint firstItem="LUI-bd-Tot" firstAttribute="leading" secondItem="LwS-vu-O69" secondAttribute="leading" id="2Fy-c9-Jb3"/>
                             <constraint firstItem="Z3c-9Q-N1e" firstAttribute="top" secondItem="tCi-nW-Afp" secondAttribute="bottom" constant="10" id="BrO-4B-rR1"/>
@@ -544,6 +594,7 @@
                             <constraint firstAttribute="trailing" secondItem="Hzo-wh-eDF" secondAttribute="trailing" constant="22" id="bME-jS-zF1"/>
                             <constraint firstItem="tCi-nW-Afp" firstAttribute="top" secondItem="LUI-bd-Tot" secondAttribute="bottom" constant="10" id="bdS-4R-5pS"/>
                             <constraint firstItem="Z3c-9Q-N1e" firstAttribute="leading" secondItem="LwS-vu-O69" secondAttribute="leading" constant="20" id="g1l-C5-nm4"/>
+                            <constraint firstItem="LwS-vu-O69" firstAttribute="trailing" secondItem="M3t-ld-Kul" secondAttribute="trailing" constant="14" id="jG2-2a-VCM"/>
                             <constraint firstItem="tCi-nW-Afp" firstAttribute="leading" secondItem="LwS-vu-O69" secondAttribute="leading" constant="20" id="nJ9-es-xCw"/>
                             <constraint firstItem="LwS-vu-O69" firstAttribute="trailing" secondItem="Gza-uh-7lU" secondAttribute="trailing" constant="20" id="out-as-VPL"/>
                             <constraint firstItem="CbC-S2-hUU" firstAttribute="centerX" secondItem="4kd-mk-BKk" secondAttribute="centerX" id="s1e-0c-flU"/>
@@ -1838,6 +1889,7 @@
         <image name="Screenshot 2020-12-12 at 5.41.49 PM" width="367" height="140"/>
         <image name="Screenshot_2020-12-17-11-52-43-934_io.cordova.myapp13e1b4.jpg" width="720" height="376"/>
         <image name="alerts-1" width="198" height="209"/>
+        <image name="closeWhite" width="66.666664123535156" height="67"/>
         <image name="logout" width="43.333332061767578" height="40"/>
         <image name="mgBack.jpg" width="338" height="338"/>
         <image name="myprofile" width="512" height="512"/>

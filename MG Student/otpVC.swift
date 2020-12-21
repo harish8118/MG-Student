@@ -28,6 +28,10 @@ class otpVC: UIViewController {
         //self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func backAct(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+        
+    }
     
    
 
